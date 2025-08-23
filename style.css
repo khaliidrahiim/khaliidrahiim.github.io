@@ -5,9 +5,23 @@ section p {
 .date {
   text-align: right;
   width: 30%;
+  font-weight: bold;
+}
+
+.workplace {
+  text-align: left;
+  width: 70%;
+  font-weight: bold;
 }
 
 .subject {
   text-align: left;
-  width: 70%;
+  width: 75%;
+  font-style: italic;
+}
+
+.location {
+  text-align: right;
+  width: 25%;
+  font-style: italic;
 }
