@@ -1,0 +1,13 @@
+section p {
+  display: inline-block;
+}
+
+.date {
+  text-align: right;
+  width: 30%;
+}
+
+.subject {
+  text-align: left;
+  width: 70%;
+}
