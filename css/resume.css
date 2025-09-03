@@ -25,3 +25,8 @@ section p {
   width: 25%;
   font-style: italic;
 }
+
+li {
+  margin-bottom: 10px;
+  list-style: circle;
+}
