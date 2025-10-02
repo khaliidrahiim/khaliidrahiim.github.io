@@ -1,23 +1,18 @@
-span > a {
-  display: inline;
-  font-weight: lighter;
+.menu {
+  text-align: center;
   text-decoration: none;
   color: black;
   font-family: sans-serif;
+  background-color: rgb(177, 168, 168);
+  border-radius: 1rem;
+  padding: 0.1rem;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-nav {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-    background-color: rgb(177, 168, 168);
-    border-radius: 1rem;
-    padding: 0.1rem;
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-
+.menu li {
+  list-style-type: none;
 }
 
 body {
@@ -33,21 +28,15 @@ h1 {
   text-align: center;
 }
 
-.left-thumbnail {
-  display: inline;
-  text-align: left;
-}
-
-section p {
-  display: inline-block;
-  text-align: right;
-}
-
-section {
-  column-count: 2;
-}
-
 /*Stylise the paragraph introducing yourself*/
 #introduction {
 
+}
+
+.content-container {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  padding: 1rem;
 }
