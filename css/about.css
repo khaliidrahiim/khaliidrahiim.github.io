@@ -1,32 +1,14 @@
-section p {
-  display: inline-block;
-}
+.content-container ul{margin:0;padding-left:1.1rem}
+.content-container li{margin-bottom:.5rem}
 
-.date {
-  text-align: right;
-  width: 30%;
-  font-weight: bold;
-}
+.resume-row,.resume-item{display:flex;flex-wrap:wrap;gap:.5rem;align-items:flex-start}
+.resume-left{flex:1 1 60%}
+.resume-right{flex:0 0 35%;text-align:right}
+.workplace{font-weight:700;margin:0}
+.subject{font-style:italic;margin:0}
+.date,.location{font-weight:600;margin:0}
 
-.workplace {
-  text-align: left;
-  width: 70%;
-  font-weight: bold;
-}
-
-.subject {
-  text-align: left;
-  width: 75%;
-  font-style: italic;
-}
-
-.location {
-  text-align: right;
-  width: 25%;
-  font-style: italic;
-}
-
-li {
-  margin-bottom: 10px;
-  list-style: circle;
+@media(max-width:640px){
+  .resume-right{text-align:left;flex-basis:100%}
+  .resume-left{flex-basis:100%}
 }

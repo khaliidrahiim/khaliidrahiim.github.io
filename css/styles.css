@@ -1,42 +1,83 @@
-.menu {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  font-family: sans-serif;
-  background-color: rgb(177, 168, 168);
-  border-radius: 1rem;
-  padding: 0.1rem;
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
+/* Global reset / typography */
+:root{
+  --content-max-width: 900px;
+  --muted: #6b6b6b;
 }
 
-.menu li {
-  list-style-type: none;
+html,body{
+  height:100%;
 }
 
 body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height:1.5;
+  color:#111;
   background-color: snow;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
 }
 
-h1 {
-  text-align: center;
+h1,h2,h3{margin:.25rem 0}
+
+/* Skip link (for keyboard users) */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  background:#000;
+  color:#fff;
+  padding:.5rem .75rem;
+  z-index:1000;
+  border-radius:4px;
 }
 
-/* Design the subtitle at the top of the page*/
-.subtitle {
-  text-align: center;
+.header-inner{
+  padding:1.25rem 1rem;
+  max-width:var(--content-max-width);
+  margin:0 auto;
 }
 
-/*Stylise the paragraph introducing yourself*/
-#introduction {
+.menu{
+  display:flex;
+  justify-content:center;
+  background-color: rgb(177, 168, 168);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  gap:1rem;
+  max-width:75%;
+  margin:0.5rem auto 0;
+}
+.menu ul{display:flex;gap:1rem;padding:0;margin:0;align-items:center}
+.menu li{list-style:none}
+.menu a{color:inherit;padding:.35rem .6rem;border-radius:6px}
+.menu a:focus,.menu a:hover{background:rgba(0,0,0,0.06);outline:none}
 
+.content-container{
+  max-width:var(--content-max-width);
+  width:calc(100% - 2rem);
+  margin:1.25rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.content-container {
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid;
-  padding: 1rem;
+@media (max-width:640px){
+  .menu{max-width:95%;flex-wrap:wrap}
+  .content-container{width:calc(100% - 1rem);border-radius:12px;padding:.75rem}
 }
