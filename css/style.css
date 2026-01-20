@@ -1,0 +1,145 @@
+/* 1. VARIABLES: Define your Blue/Red theme here */
+:root {
+    --primary-blue: #0056b3;  /* Deep, professional blue */
+    --primary-red: #d32f2f;   /* Strong, energetic red */
+    --bg-color: #f8f9fa;      /* Very light grey background */
+    --card-bg: #ffffff;       /* White cards */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. GLOBAL RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* 3. LAYOUT UTILITIES */
+.container {
+    max-width: 900px; /* Restricts width for readability */
+    margin: 0 auto;   /* Centers the container */
+    padding: 2rem;
+}
+
+/* 4. HERO SECTION */
+.hero-section {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, #fff 0%, #e3f2fd 100%); /* Subtle blue fade */
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin: 1rem 0;
+}
+
+/* 5. SHARED "CARD" STYLES (Used for both Skills and Hobbies) */
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation setup */
+}
+
+/* The "Lift" Effect on Hover */
+.card:hover {
+    transform: translateY(-8px); /* Moves card UP by 8px */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1); /* Shadow grows larger */
+}
+
+/* 6. THE "TRIMS" (Colored borders) */
+.blue-trim {
+    border-top: 5px solid var(--primary-blue); /* Blue line at top */
+}
+
+.red-trim {
+    border-top: 5px solid var(--primary-red); /* Red line at top */
+}
+
+/* 7. GRID SYSTEMS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* 8. PILL SHAPES STYLING */
+/* Label in Hero */
+.pill-label {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px; /* Full rounded ends */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Small tags inside cards */
+.pill-small {
+    display: inline-block;
+    background-color: #eee;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    color: var(--text-dark);
+}
+
+/* Large Interest Pills */
+.interests-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pill-large {
+    background-color: white;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.pill-large:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: scale(1.05); /* Slightly grows larger */
+}
+
+/* 9. SECTION TITLES */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-size: 2rem;
+}
+
+/* 10. FOOTER */
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
