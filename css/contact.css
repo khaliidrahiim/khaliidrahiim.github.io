@@ -1,0 +1,45 @@
+body {
+  background-color: aquamarine;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact-card .business-card{
+  max-width:420px;
+  margin:1rem auto;
+  padding:1rem;
+  background:rgba(255,255,255,0.7);
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.05);
+  text-align:center;
+}
+.business-card .profile-image{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  margin:0 auto 0.5rem;
+}
+.business-card h2{margin:.25rem 0}
+.business-card p{margin:.25rem 0}
+.business-card a{color:inherit}
+.social-media{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+
+@media(min-width:700px){
+  .contact-card .business-card{display:flex;gap:1rem;align-items:center;padding:1.25rem}
+  .business-card .profile-image{width:140px;height:140px;flex:0 0 140px}
+  .business-card h2{font-size:1.25rem}
+}
